@@ -1,0 +1,69 @@
+.navbar {
+    background-color: #000; /* Black background */
+  }
+  .nav-link{
+    color: #fff;
+  }
+  .navbar-nav .nav-link:hover{
+    color: #a7b2ca;
+  }
+
+  .navbar-nav .nav-link.active{
+    color:#779aeb;
+  }
+
+
+  .navbar-brand {
+    color: #fff; /* White text for the brand */
+  }
+
+  .navbar-brand:hover {
+    color: #bbb; /* Slight hover effect */
+  }
+
+  .navbar-toggler {
+    background-color: #000; /* Black background for the toggler */
+    border: none; /* Remove default border */
+  }
+
+  .navbar-toggler-icon {
+    background-color: #a29f9f; /* White color for the toggler icon */
+  }
+
+  /* Dark theme for body */
+  body {
+    background-color: #121212; /* Dark background */
+    color: #e0e0e0; /* Light text for contrast */
+  }
+
+  /* Dark form input styling */
+  .form-control {
+    background-color: #333; /* Dark input background */
+    color: #fff; /* White text in input fields */
+    border: 1px solid #444; /* Darker border */
+  }
+
+  .form-control:focus {
+    background-color: #444; /* Slightly lighter input background on focus */
+    border-color: #fff; /* White border on focus */
+  }
+
+  .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+  }
+
+  .btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #004085;
+  }
+
+  .container {
+    background-color: #1e1e1e; /* Dark background for the form container */
+    padding: 20px;
+    border-radius: 8px;
+  }
+
+  .col-form-label {
+    color: #e0e0e0; /* Light label color */
+  }

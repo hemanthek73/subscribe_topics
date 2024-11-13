@@ -5,10 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <title>Topic Page</title>
+  <link rel="stylesheet" href="../style/style.css">
+
 </head>
 <body>
   <div>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <nav class="navbar navbar-expand-lg">
       <div class="container-fluid">
         <a class="navbar-brand" href="home.html">User Topic</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -17,7 +19,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link"  href="register.html">Register</a>
+              <a class="nav-link" href="register.html">Register</a>
             </li>
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="topics.html">Topic</a>
@@ -26,29 +28,31 @@
               <a class="nav-link" href="subscribe.html">Subscriptions</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link " href="notifications.html">Notifications</a>
+              <a class="nav-link" href="notifications.html">Notifications</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="subscriptions.html">subscription list</a>
+              <a class="nav-link" href="subscriptions.html">Subscription List</a>
             </li>
           </ul>
+        </div>
       </div>
+    </nav>
+    
+    <div class="container mt-4 col-sm-12 col-md-10 col-lg-8 col-xl-6 col-xxl-4">
+      <h2>Create a New Topic</h2>
+      <form id="createTopicForm">
+        <div class="mb-3">
+          <label for="topicName" class="form-label">Topic Name</label>
+          <input type="text" class="form-control" id="topicName" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Create Topic</button>
+      </form>
     </div>
-  </nav>
-  <div class="container mt-4 col-sm-12 col-md-10 col-lg-8 col-xl-6 col-xxl-4">
-    <h2>Create a New Topic</h2>
-    <form id="createTopicForm">
-      <div class="mb-3">
-        <label for="topicName" class="form-label">Topic Name</label>
-        <input type="text" class="form-control" id="topicName" required>
-      </div>
-
-      <button type="submit" class="btn btn-primary">Create Topic</button>
-    </form>
   </div>
-</div>
-<script src="/static/scripts/topics.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
+  <script src="/static/scripts/topics.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
+
+
