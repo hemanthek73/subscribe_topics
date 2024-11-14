@@ -17,7 +17,7 @@
               },
               body: new URLSearchParams({
                   'username': username
-              }).toString() // Make sure to convert the data into a URL-encoded string
+              }).toString() 
           })
           .then(response => response.json())
           .then(data => {
