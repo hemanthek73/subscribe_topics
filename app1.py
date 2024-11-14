@@ -6,7 +6,7 @@ from werkzeug.security import generate_password_hash, check_password_hash
 from flask_bcrypt import Bcrypt
 
 # Initialize Flask app
-app = Flask(__name__)
+app = Flask(__name__,static_folder="static")
 CORS(app)
 app.secret_key = 'my_secret_key'  # Replace with a more secure key in production
 
