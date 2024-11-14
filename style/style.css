@@ -67,3 +67,8 @@
   .col-form-label {
     color: #e0e0e0; /* Light label color */
   }
+  .list-group-item{
+    background-color: #1e1e1e;
+    color: #bbb;
+  }
+  

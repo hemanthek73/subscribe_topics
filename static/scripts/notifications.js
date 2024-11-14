@@ -14,7 +14,7 @@ function getUserNotifications() {
       if (data.new_topics && data.new_topics.length > 0) {
         // If there are new topics, display them in the list
         let topicList = data.new_topics.map(topic => `
-          <li>Topic: ${topic.name} (ID: ${topic.topic_id})</li>
+          <li style='border:1px solid white; background-color:#1e1e1e;color:white;padding:5px'> ${topic.name} (ID: ${topic.topic_id})</li>
         `).join('');
         document.getElementById('notificationList').innerHTML = topicList;
       } else {
