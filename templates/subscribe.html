@@ -46,12 +46,16 @@
       <form id="subscribeForm">
         <div class="mb-3">
           <label for="userId" class="form-label">User ID</label>
-          <input type="number" class="form-control" id="userId" required>
+          <input type="number" class="form-control" id="userId" placeholder="Enter User ID" required>
         </div>
-        <div class="mb-3">
+        <div class="mb-3" id="topicDropdownContainer" style="display: none;">
           <label for="topicId" class="form-label">Topic ID</label>
-          <input type="number" class="form-control" id="topicId" required>
+          <select class="form-control" id="topicId" required>
+            <option value="" disabled selected>Select a Topic</option>
+            <!-- Dynamic topics will be added here -->
+          </select>
         </div>
+        
         <button type="submit" class="btn btn-primary">Subscribe</button>
       </form>
     </div>

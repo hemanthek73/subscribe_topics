@@ -106,17 +106,27 @@ def register():
 
 # -----------------Route for creating a new topic--------------------------------------
 
-@app.route('/topics', methods=['POST'])
-def create_topic():
-    topic_name = request.form.get('topic_name')
-    if not topic_name:
-        return jsonify({"error": "Topic name is required"}), 400
-    
-    new_topic = Topic(name=topic_name)
-    db.session.add(new_topic)
-    db.session.commit()
-    
-    return jsonify({"message": "Topic created successfully", "topic_id": new_topic.id})
+@app.route('/topics', methods=['POST', 'GET'])
+def handle_topics():
+    if request.method == 'POST':
+        # Handle topic creation
+        topic_name = request.form.get('topic_name')
+        if not topic_name:
+            return jsonify({"error": "Topic name is required"}), 400
+        
+        # Create a new topic
+        new_topic = Topic(name=topic_name)
+        db.session.add(new_topic)
+        db.session.commit()
+        
+        return jsonify({"message": "Topic created successfully", "topic_id": new_topic.id}), 201
+
+    elif request.method == 'GET':
+        # Handle fetching topics
+        topics = Topic.query.all()  # Assuming `Topic` is the database model for topics
+        topic_list = [{"id": topic.id, "name": topic.name} for topic in topics]
+        return jsonify(topic_list), 200
+
 
 #---------------- Route for subscribing to a topic----------------------------------------
 
